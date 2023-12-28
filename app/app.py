@@ -3,14 +3,12 @@ app.py
 
 This file serves as the main entry point for the Botanica web application.
 It defines the Flask application instance, routes, and configuration.
-
-Last edited: 28/12/2023 11:19pm NZT
 """
 
 from flask import Flask, render_template
 
 # Create a Flask application instance
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 # Define a route for the home page
 @app.route('/')
