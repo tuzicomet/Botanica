@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Botanica - {{title}}</title>
+        <!--<link rel="stylesheet" href="/static/css/style.css">-->
+    </head>
+    <body>
+        <div id="wrapper">
+            {% include 'partials/header.html' %}
+            {% include 'partials/nav.html' %}
+            {% block content %}{% endblock%}
+            {% include 'partials/footer.html' %}
+        </div>
+    </body>
+</html>
