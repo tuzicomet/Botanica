@@ -14,7 +14,7 @@ app = Flask(__name__, template_folder='templates')
 @app.route('/')
 def home():
     # Render the 'index.html' template
-    return render_template('index.html')
+    return render_template('pages/index.html')
 
 # This block ensures that the app is run only when this script is executed directly
 if __name__ == '__main__':
