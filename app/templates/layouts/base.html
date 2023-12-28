@@ -1,15 +1,41 @@
-<!doctype html>
+<!--
+    base.html - Base layout template for the Botanica website.
+
+    This file defines the common structure shared across multiple pages,
+    including the header, navigation menu, content block (to be overridden by individual pages),
+    and the footer.
+
+    Author: Leonard Lau
+    Last Updated: 29/12/2023
+-->
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Botanica - {{title}}</title>
-        <link rel="stylesheet" href="/static/css/style.css">
-    </head>
-    <body>
-        <div id="wrapper">
-            {% include 'partials/header.html' %}
-            {% include 'partials/nav.html' %}
-            {% block content %}{% endblock%}
-            {% include 'partials/footer.html' %}
-        </div>
-    </body>
+
+<head>
+    <!-- Meta information, including the page title -->
+    <title>Botanica - {{ title }}</title>
+    
+    <!-- Link to the main stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <!-- Main container for the entire page -->
+    <div id="wrapper">
+        
+        <!-- Include the header section -->
+        {% include 'partials/header.html' %}
+        
+        <!-- Include the navigation menu -->
+        {% include 'partials/nav.html' %}
+        
+        <!-- Content block that will be overridden by individual pages -->
+        {% block content %}{% endblock %}
+        
+        <!-- Include the footer section -->
+        {% include 'partials/footer.html' %}
+        
+    </div>
+</body>
+
 </html>

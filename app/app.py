@@ -1,8 +1,11 @@
 """
-app.py
+    app.py
 
-This file serves as the main entry point for the Botanica web application.
-It defines the Flask application instance, routes, and configuration.
+    This file serves as the main entry point for the Botanica web application.
+    It defines the Flask application instance, routes, and configuration.
+
+    Author: Leonard Lau
+    Last Updated: 29/12/2023
 """
 
 from flask import Flask, render_template
