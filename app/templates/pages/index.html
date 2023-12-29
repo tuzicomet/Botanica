@@ -23,6 +23,15 @@
     <h1>Welcome to Botanica!</h1>
     <p>This is the home page of the Botanica website.</p>
 
+    <!-- Image of a monstera deliciosa from the static folder -->
+    <!-- 
+    NOTE: url_for is a Flask function which dynamically generates links
+    in a way that is flexible and maintainable
+    Basic syntax: url_for(endpoint, **values) 
+    -->
+    <img src="{{ url_for('static', filename='img/monstera-deliciosa.jpg') }}" 
+        alt="Monstera Deliciosa">
+
     {% endblock %}
 </body>
 
