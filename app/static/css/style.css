@@ -16,6 +16,12 @@ html, body {
     margin: 0; /* Remove default margin to ensure full-width */
 }
 
+/* Additional styles for the header */
+body.scrolled .Header {
+    /* Hide the regular header when the user scrolls down */
+    display: none;
+}
+
 /* Styling for links */
 a {
     color: inherit; /* Inherit color from the parent (normal text color) */
@@ -70,4 +76,22 @@ h1 {
     /* On hover, do not change link colour for header or navigation */
     color: inherit; /* Inherit color from the parent (normal text color) */
     text-decoration: underline; /* Underline the link */
+}
+
+/* Additional styles for the thin green bar header */
+.thin-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3em; /* Adjust the height of the thin green bar */
+    background-color: rgb(16, 117, 60);
+    display: none;
+    transition: height 0.3s ease; /* Add a smooth transition for height changes */
+}
+
+/* Show the thin green bar when the user scrolls down */
+body.scrolled .thin-bar {
+    display: block;
+    height: 3em; /* Adjust the height to the desired final value */
 }

@@ -9,12 +9,12 @@
     Last Updated: 29/12/2023
 -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <!-- Meta information, including the page title -->
     <title>Botanica - {{ title }}</title>
-    
+
     <!-- Google Fonts link for DM Serif Display, which will mainly be used for the header -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,26 +22,22 @@
 
     <!-- Link to the main stylesheet -->
     <link rel="stylesheet" href="/static/css/style.css">
-
 </head>
 
 <body>
     <!-- Main container for the entire page -->
     <div id="wrapper">
-        
         <!-- Include the header section -->
         {% include 'partials/header.html' %}
-        
         <!-- Include the navigation menu -->
         {% include 'partials/nav.html' %}
-        
         <!-- Content block that will be overridden by individual pages -->
         {% block content %}{% endblock %}
-        
         <!-- Include the footer section -->
         {% include 'partials/footer.html' %}
-        
     </div>
+
+    <script src="{{ url_for('static', filename='js/header-scroll.js') }}"></script>
 </body>
 
 </html>
