@@ -6,6 +6,18 @@ html {
     color: white;
 }
 
+/* Styling for links */
+a {
+    color: inherit; /* Inherit color from the parent (normal text color) */
+    text-decoration: underline; /* Underline the link */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Change link color to green on hover */
+a:hover {
+    color: rgb(28, 94, 51);
+}
+
 /* Additional styles for the header */
 .Header {
     /* Add styles specific to the header, including the DM Serif Display font */
