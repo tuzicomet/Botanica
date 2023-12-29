@@ -11,7 +11,7 @@
 /* Styling for html and body */
 html, body {
     font-family: "Segoe UI";
-    background-color: rgb(37, 34, 34);
+    background-color: rgb(27 29 30);
     color: white;
     margin: 0; /* Remove default margin to ensure full-width */
 }
