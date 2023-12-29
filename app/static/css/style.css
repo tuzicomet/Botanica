@@ -102,6 +102,9 @@ body.scrolled .Header {
     background-color: rgb(16, 117, 60);
     opacity: 0; /* Start with zero opacity */
     visibility: hidden; /* Start hidden */
+    padding-top: 0.8em; /* add padding for space between the edges and the content */
+    padding-left: 1em;
+    padding-bottom: 0.4em;
     /* The following line determines the transition for the bar disappearing */
     /*transition: opacity 0.0s ease, visibility 0s linear 0.0s; */
 }
