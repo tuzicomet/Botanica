@@ -28,20 +28,32 @@ a:hover {
     color: rgb(16, 117, 60); /* Change link color to green on hover */
 }
 
-/* Styling for h1 headers */ 
-h1 {
+/* Additional styles for the regular header */
+.Header {
+    /* Add styles specific to the regular header, including the DM Serif Display font */
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1em;
+    padding: 0.5em;
+    margin: 0; /* Remove margin to ensure full-width */
+    /* The following are used so that the Botanica text and the logo are centered together */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+
+/* Styling for the Botanica logo text */ 
+.logo-text {
     font-size: 3em; /* Twice the font size of the parent element (body) */
     margin-top: 0.1em; /* Adjust top margin */
     margin-bottom: 0.1em;  /* Adjust bottom margin */
 }
 
-/* Additional styles for the regular header */
-.Header {
-    /* Add styles specific to the header, including the DM Serif Display font */
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.1em;
-    padding: 0.5em;
-    margin: 0; /* Remove margin to ensure full-width */
+/* Styling for the icon logo */
+.logo-icon {
+    width: 2.6em; /* Adjust the width of the logo as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 0.3em; /* Adjust the spacing between the logo and text */
+    vertical-align: text-bottom; /* vertically align the icon more with the text */
 }
 
 /* styling for the regular navigation bar */

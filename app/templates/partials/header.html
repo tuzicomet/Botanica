@@ -8,9 +8,11 @@
 -->
 <div class="header-box">
     <!-- Header content -->
-    <div id="header-top" class="Header">
+    <div class="Header">
         <a href="{{ url_for('home') }}">
-            <h1>Botanica</h1>
+            <span class="logo-text">Botanica</span>
+            <img src="{{ url_for('static', filename='img/logo150.png') }}" 
+            alt="Botanica logo", class="logo-icon">
         </a>
     </div>
     <!-- When scrolling down from the top, the header will be reduced to a minimised header bar-->
