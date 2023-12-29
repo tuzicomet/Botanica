@@ -13,13 +13,34 @@ a {
     transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
-/* Change link color to green on hover */
+/* Styling for when hovering over links */
 a:hover {
-    color: rgb(28, 94, 51);
+    color: rgb(28, 94, 51); /* Change link color to green on hover */
 }
 
 /* Additional styles for the header */
 .Header {
     /* Add styles specific to the header, including the DM Serif Display font */
     font-family: 'DM Serif Display', serif;
+    text-align: center;
+}
+
+/* styling for the navigation bar */
+.navigation-box {
+    text-align: center;
+}
+
+/* Styling for links in the header and navigation bar */
+.Header a,
+.navigation-box a {
+    /* Remove underline and color change for links in header and navigation */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from the parent (normal text color) */
+}
+
+/* Styling for when hovering over links in the navigation bar */
+.navigation-box a:hover {
+    /* On hover, do not change link colour for header or navigation */
+    color: inherit; /* Inherit color from the parent (normal text color) */
+    text-decoration: underline; /* Underline the link */
 }
