@@ -19,6 +19,12 @@ def home():
     # Render the 'index.html' template
     return render_template('pages/index.html')
 
+# Define a route for the forum front page
+@app.route('/forum')
+def forum():
+    # Render the 'forum.html' template
+    return render_template('pages/forum.html')
+
 # This block ensures that the app is run only when this script is executed directly
 if __name__ == '__main__':
     # Run the Flask app in debug mode
