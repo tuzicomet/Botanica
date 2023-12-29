@@ -1,0 +1,40 @@
+<!--
+    marketplace.html - marketplace page for the Botanica website.
+
+    This file extends the base layout and defines the content specific to the marketplace page.
+
+    This page serves as a 'front page' to the marketplace section of the website.
+
+    Author: Leonard Lau
+    Last Updated: 29/12/2023
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta information, including the page title -->
+    <title>Botanica</title>
+</head>
+
+<body>
+    <!-- Content block that overrides the 'content' block in the base layout -->
+    {% extends 'layouts/base.html' %}
+    {% block content %}
+
+    <!-- Main content for the home page -->
+    <h1>Marketplace</h1>
+    <p>This is the marketplace page of the Botanica website.</p>
+
+    <!-- Image of a monstera deliciosa from the static folder -->
+    <!-- 
+    NOTE: url_for is a Flask function which dynamically generates links
+    in a way that is flexible and maintainable
+    Basic syntax: url_for(endpoint, **values) 
+    -->
+    <img src="{{ url_for('static', filename='img/monstera-deliciosa.jpg') }}" 
+        alt="Monstera Deliciosa">
+
+    {% endblock %}
+</body>
+
+</html>

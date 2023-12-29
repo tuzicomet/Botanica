@@ -25,6 +25,12 @@ def forum():
     # Render the 'forum.html' template
     return render_template('pages/forum.html')
 
+# Define a route for the marketplace front page
+@app.route('/marketplace')
+def marketplace():
+    # Render the 'forum.html' template
+    return render_template('pages/marketplace.html')
+
 # This block ensures that the app is run only when this script is executed directly
 if __name__ == '__main__':
     # Run the Flask app in debug mode
