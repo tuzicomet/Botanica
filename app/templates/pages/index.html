@@ -1,12 +1,29 @@
-<!DOCTYPE html>
+<!--
+    index.html - Home page for the Botanica website.
 
-<title>Botanica</title>
-{% extends 'layouts/base.html' %}
-{% block content %}
+    This file extends the base layout and defines the content specific to the home page.
+
+    Author: Leonard Lau
+    Last Updated: 29/12/2023
+-->
+<!DOCTYPE html>
 <html lang="en">
+
+<head>
+    <!-- Meta information, including the page title -->
+    <title>Botanica</title>
+</head>
+
 <body>
+    <!-- Content block that overrides the 'content' block in the base layout -->
+    {% extends 'layouts/base.html' %}
+    {% block content %}
+
+    <!-- Main content for the home page -->
     <h1>Welcome to Botanica!</h1>
     <p>This is the home page of the Botanica website.</p>
+
+    {% endblock %}
 </body>
+
 </html>
-{% endblock %}
