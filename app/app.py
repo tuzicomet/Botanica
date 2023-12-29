@@ -8,10 +8,18 @@
     Last Updated: 29/12/2023
 """
 
+import os
+from flask import send_from_directory  
+
 from flask import Flask, render_template
 
 # Create a Flask application instance
 app = Flask(__name__, template_folder='templates')
+
+# Add a custom view to handle /favicon requests, as by default, flask only serves files on the /static endpoint
+@app.route('/favicon.ico') 
+def favicon(): 
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 # Define a route for the home page
 @app.route('/')
