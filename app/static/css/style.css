@@ -20,26 +20,33 @@ a:hover {
     color: rgb(16, 117, 60); /* Change link color to green on hover */
 }
 
+/* Styling for h1 headers */ 
+h1 {
+    font-size: 3em; /* Twice the font size of the parent element (body) */
+    margin-top: 0.1em; /* Adjust top margin */
+    margin-bottom: 0.1em;  /* Adjust bottom margin */
+}
+
 /* Additional styles for the header */
 .Header {
     /* Add styles specific to the header, including the DM Serif Display font */
     font-family: 'DM Serif Display', serif;
+    font-size: 1.1em;
+    padding: 0.5em;
+    margin: 0; /* Remove margin to ensure full-width */
 }
 
 /* styling for the navigation bar */
-/*
 .navigation-box {
-
+    padding: 0.6em;
+    margin: 0; /* Remove margin to ensure full-width */
 }
-*/
 
 /* styling for both header and navigation bar */
 .Header,
 .navigation-box {
     text-align: center;
     background-color: rgb(16, 117, 60);
-    padding: 10px;
-    margin: 0; /* Remove margin to ensure full-width */
 }
 
 /* Styling for links in the header and navigation bar */
