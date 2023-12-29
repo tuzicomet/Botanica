@@ -5,7 +5,7 @@
     Contains the main styling rules for the website layout and components.
 
     Author: Leonard Lau
-    Last Updated: 29/12/2023
+    Last Updated: 30/12/2023
 */
 
 /* Styling for html and body */
@@ -115,4 +115,13 @@ body.scrolled .minimised-header {
     visibility: visible; /* Make it visible */
     /* the below transition makes the bar fade in when it appears */
     transition: opacity 0.2s ease, visibility 0s linear; /* Add a smooth transition for opacity */
+}
+
+.footer-box {
+    background-color: rgb(16, 117, 60);
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 0.5em;
+    padding-left: 1em;
+    margin: 0; /* Remove margin to ensure full-width */
 }
