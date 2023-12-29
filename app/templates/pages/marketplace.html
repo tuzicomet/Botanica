@@ -6,19 +6,22 @@
     This page serves as a 'front page' to the marketplace section of the website.
 
     Author: Leonard Lau
-    Last Updated: 29/12/2023
+    Last Updated: 30/12/2023
 -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Meta information, including the page title -->
-    <title>Botanica</title>
+    <!-- Meta information -->
 </head>
 
 <body>
     <!-- Content block that overrides the 'content' block in the base layout -->
     {% extends 'layouts/base.html' %}
+
+    <!-- Adds this to the title -->
+    {% block title %}- Marketplace{% endblock %}
+
     {% block content %}
 
     <!-- Main content for the home page -->

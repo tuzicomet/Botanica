@@ -4,19 +4,22 @@
     This file extends the base layout and defines the content specific to the home page.
 
     Author: Leonard Lau
-    Last Updated: 29/12/2023
+    Last Updated: 30/12/2023
 -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Meta information, including the page title -->
-    <title>Botanica - Forum</title>
+    <!-- Meta information -->
 </head>
 
 <body>
     <!-- Content block that overrides the 'content' block in the base layout -->
     {% extends 'layouts/base.html' %}
+
+    <!-- Dont add anything to the title -->
+    {% block title %}{% endblock %}
+
     {% block content %}
 
     <!-- Main content for the home page -->

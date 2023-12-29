@@ -6,7 +6,7 @@
     and the footer.
 
     Author: Leonard Lau
-    Last Updated: 29/12/2023
+    Last Updated: 30/12/2023
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@
     <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
 
     <!-- Follow this format for the titles -->
-    <title>Botanica - {{ title }}</title>
+    <title>Botanica {% block title %}{% endblock %}</title>
 
     <!-- Google Fonts link for DM Serif Display, which will mainly be used for the header -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
