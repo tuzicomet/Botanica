@@ -16,12 +16,6 @@ html, body {
     margin: 0; /* Remove default margin to ensure full-width */
 }
 
-/* Additional styles for the header */
-body.scrolled .Header {
-    /* Hide the regular header when the user scrolls down */
-    display: none;
-}
-
 /* Styling for links */
 a {
     color: inherit; /* Inherit color from the parent (normal text color) */
@@ -41,7 +35,7 @@ h1 {
     margin-bottom: 0.1em;  /* Adjust bottom margin */
 }
 
-/* Additional styles for the header */
+/* Additional styles for the regular header */
 .Header {
     /* Add styles specific to the header, including the DM Serif Display font */
     font-family: 'DM Serif Display', serif;
@@ -50,20 +44,20 @@ h1 {
     margin: 0; /* Remove margin to ensure full-width */
 }
 
-/* styling for the navigation bar */
+/* styling for the regular navigation bar */
 .navigation-box {
     padding: 0.6em;
     margin: 0; /* Remove margin to ensure full-width */
 }
 
-/* styling for both header and navigation bar */
+/* styling for both the regular header and the navigation bar */
 .Header,
 .navigation-box {
     text-align: center;
     background-color: rgb(16, 117, 60);
 }
 
-/* Styling for links in the header and navigation bar */
+/* Styling for links in the regular header and navigation bar */
 .Header a,
 .navigation-box a {
     /* Remove underline and color change for links in header and navigation */
@@ -76,6 +70,14 @@ h1 {
     /* On hover, do not change link colour for header or navigation */
     color: inherit; /* Inherit color from the parent (normal text color) */
     text-decoration: underline; /* Underline the link */
+}
+
+/* 
+    Styles for the regular header when the page is scrolled down.
+    Applied when the 'scrolled' class is present on the body, set by the header-scroll.js script
+*/
+body.scrolled .Header {
+    display: none; /* Hide the regular header when the user scrolls down */
 }
 
 /* Additional styles for the minimised header bar */
