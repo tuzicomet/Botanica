@@ -12,12 +12,15 @@
         <a href="{{ url_for('home') }}">
             <span class="logo-text">Botanica</span>
             <img src="{{ url_for('static', filename='img/logo150.png') }}" 
-            alt="Botanica logo", class="logo-icon">
+                alt="Botanica logo", class="logo-icon">
         </a>
     </div>
     <!-- When scrolling down from the top, the header will be reduced to a minimised header bar-->
     <div id="header-scroll" class="minimised-header">
-        <img src="{{ url_for('static', filename='img/logo150.png') }}" 
-            alt="Botanica logo", class="logo-icon">
+        <a href="{{ url_for('home') }}">
+            <span class="logo-text">Botanica</span> <!-- Could remove this part -->
+            <img src="{{ url_for('static', filename='img/logo150.png') }}" 
+                alt="Botanica logo", class="logo-icon">
+        </a>
     </div>
 </div>

@@ -72,6 +72,7 @@ a:hover {
 
 /* Styling for links in the regular header and navigation bar */
 .Header a,
+.minimised-header a,
 .navigation-box a {
     /* Remove underline and color change for links in header and navigation */
     text-decoration: none; /* Remove underline */
@@ -80,7 +81,7 @@ a:hover {
 
 /* Styling for when hovering over links in the navigation bar */
 .navigation-box a:hover {
-    /* On hover, do not change link colour for header or navigation */
+    /* On hover, do not change link colour*/
     color: inherit; /* Inherit color from the parent (normal text color) */
     text-decoration: underline; /* Underline the link */
 }
@@ -95,6 +96,8 @@ body.scrolled .Header {
 
 /* Additional styles for the minimised header bar */
 .minimised-header {
+    font-family: 'DM Serif Display', serif;
+    font-size: 0.8em;
     position: fixed;
     top: 0;
     left: 0;
@@ -103,11 +106,25 @@ body.scrolled .Header {
     background-color: rgb(16, 117, 60);
     opacity: 0; /* Start with zero opacity */
     visibility: hidden; /* Start hidden */
-    padding-top: 0.8em; /* add padding for space between the edges and the content */
-    padding-left: 1em;
-    padding-bottom: 0.4em;
+    padding-top: 0.6em; /* add padding for space between the edges and the content */
+    padding-bottom: 0.6em;
+    /* The following are used so that the Botanica text and the logo are centered together */
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
     /* The following line determines the transition for the bar disappearing */
     /*transition: opacity 0.0s ease, visibility 0s linear 0.0s; */
+    /* Add styles specific to the regular header, including the DM Serif Display font */
+}
+
+/* Styling for links in the minimised header */
+.minimised-header a {
+    text-decoration: none; /* remove the underline */
+}
+
+/* Styling for hovering over links in the minimised header */
+.minimised-header a:hover {
+    color: inherit; /* Do not change colour */
 }
 
 /* Show the minimised header bar when the user scrolls down */
