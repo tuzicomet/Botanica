@@ -136,6 +136,8 @@ body.scrolled .Header {
 .menu-icon {
     font-size: 2em;
     margin-left: 0.5em;
+    cursor: pointer; /* Add cursor pointer for indicating it's clickable */
+    z-index: 1; /* Set z-index to 1 to put it above minimized-logo */
 }
 
 /* Show the minimised header bar when the user scrolls down */
@@ -144,6 +146,23 @@ body.scrolled .minimised-header {
     visibility: visible; /* Make it visible */
     /* the below transition makes the bar fade in when it appears */
     transition: opacity 0.2s ease, visibility 0s linear; /* Add a smooth transition for opacity */
+}
+
+/* Styling for the menu bar */
+.menu-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20em; /* Adjust the width as needed */
+    height: 100%; /* Take up the full height of the viewport */
+    background-color: rgb(16, 117, 60);
+    visibility: hidden; /* Initially hidden */
+}
+
+/* Styling to make the menu bar visible when toggled */
+.menu-bar.active {
+    visibility: visible; /* Make it visible */
+    transform: translateX(0); /* Move on-screen */
 }
 
 .footer-box {
