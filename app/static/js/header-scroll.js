@@ -1,3 +1,13 @@
+/*
+    header-scroll.js - Script for handling header scrolling on the Botanica website.
+
+    This script adds a "scrolled" class to the body element when the user scrolls down,
+    allowing for styling changes in the CSS.
+
+    Author: Leonard Lau
+    Last Updated: 30/12/2023
+*/
+
 // Wait for the Document Object Model (DOM) content to fully load before executing the script
 // NOTE: The DOM is a programming interface for web documents. By "DOM content," we are  
 // referring to the content of the HTML document that the browser has loaded.
