@@ -157,6 +157,8 @@ body.scrolled .minimised-header {
     height: 100%; /* Take up the full height of the viewport */
     background-color: rgb(16, 117, 60);
     visibility: hidden; /* Initially hidden */
+    transform: translateX(-100%); /* Move off-screen to the left */
+    transition: transform 0.3s ease; /* Add a smooth transition for visibility */
 }
 
 /* Styling to make the menu bar visible when toggled */
