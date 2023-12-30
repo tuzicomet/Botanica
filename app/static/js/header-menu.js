@@ -19,3 +19,11 @@ menuIcon.addEventListener('click', () => {
     // Toggle the 'open' class on the overlay for dimming effect
     overlay.classList.toggle('open');
 });
+
+// Add an event listener to close the menu when clicking outside the menu bar
+document.addEventListener('click', (event) => {
+    if (!menuBar.contains(event.target) && !menuIcon.contains(event.target)) {
+        menuBar.classList.remove('active');
+        overlay.classList.remove('open');
+    }
+});
