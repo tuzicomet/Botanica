@@ -60,6 +60,7 @@ a:hover {
 .navigation-box {
     padding: 0.6em;
     margin: 0; /* Remove margin to ensure full-width */
+    padding-top: 0; /* Remove padding at the top */
 }
 
 /* styling for both the regular header and the navigation bar */
