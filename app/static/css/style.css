@@ -135,9 +135,19 @@ body.scrolled .Header {
 /* Styling for the menu icon (three horizontal bars) */
 .menu-icon {
     font-size: 2em;
-    margin-left: 0.5em;
+    margin-left: 0.8em;
     cursor: pointer; /* Add cursor pointer for indicating it's clickable */
     z-index: 3; /* Set z-index to 3 to put it above most stuff */
+    position: fixed; /* Fix the icon to the top of the viewport */
+    margin-top: 0.7em;
+}
+
+/* 
+Styling for the menu icon when the page has been scrolled down 
+(i.e. minimised header bar should be active) 
+*/
+body.scrolled .menu-icon {
+    margin-top: 0.25em; /* Reduce the top margin to align with the minimised header */
 }
 
 /* Show the minimised header bar when the user scrolls down */

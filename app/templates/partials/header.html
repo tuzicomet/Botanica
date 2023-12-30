@@ -8,6 +8,11 @@
 -->
 <div class="header-box">
     <!-- Header content -->
+    
+    <!-- Three-bar menu icon -->
+    <!-- NOTE: This is an HTML entity, alternatively could use an image -->
+    <div class="menu-icon">&#9776;</div>
+
     <div class="Header">
         <!-- Whole logo (text and icon) is a link to the home page -->
         <a href="{{ url_for('home') }}">
@@ -19,9 +24,6 @@
 
     <!-- When scrolling down from the top, the header will be reduced to a minimised header bar-->
     <div id="header-scroll" class="minimised-header">
-        <!-- Three-bar menu icon -->
-        <!-- NOTE: This is an HTML entity, alternatively could use an image -->
-        <div class="menu-icon">&#9776;</div>
 
         <!-- Logo, including text and icon, for the minimised header -->
         <div class="minimised-logo">
@@ -31,15 +33,14 @@
                     alt="Botanica logo", class="logo-icon">
             </a>
         </div>
-        
-        <!-- Menu bar (initially hidden) -->
-        <div class="menu-bar">
-            <!-- Add menu items here later -->
-        </div>
-
-        <!-- Overlay for dimming effect -->
-        <div class="overlay"></div>
-
     </div>
+
+    <!-- Menu bar (initially hidden) -->
+    <div class="menu-bar">
+        <!-- Add menu items here later -->
+    </div>
+
+    <!-- Overlay for dimming effect -->
+    <div class="overlay"></div>
     
 </div>
