@@ -97,17 +97,17 @@ body.scrolled .Header {
 /* Additional styles for the minimised header bar */
 .minimised-header {
     font-family: 'DM Serif Display', serif;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    position: fixed; /* Fix the header at the top of the viewport */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left edge */
+    width: 100%; /* Make it full-width */
     height: 4em; /* Adjust the height of the thin green bar */
     background-color: rgb(16, 117, 60);
     opacity: 0; /* Start with zero opacity */
     visibility: hidden; /* Start hidden */
-    display:flex;
-    flex-wrap:nowrap;
-    align-items:center;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: nowrap; /* Prevent wrapping of flex items to keep them in a single line */
+    align-items: center; /* Center items vertically */
     /* The following line determines the transition for the bar disappearing */
     /*transition: opacity 0.0s ease, visibility 0s linear 0.0s; */
 }
@@ -122,15 +122,17 @@ body.scrolled .Header {
     color: inherit; /* Do not change colour */
 }
 
+/* Styling for the logo (text and icon) in the minimized header */
 .minimised-logo {
     font-size: 0.8em;
     /* The following are used so that the Botanica text and the logo are centered together */
-    flex-grow:1;       /* take up rest of line */
-    text-align:center; /* centre text in p */
-    /* The menu icon has 0.5 margin and fontsize 2, so we offset by that to centre */
+    flex-grow: 1; /* take up rest of line */
+    text-align: center; /* centre text */
+    /* The menu icon has 0.5 margin and fontsize 2, so we offset by that to properly centre */
     margin-left: -2.5em;
 }
 
+/* Styling for the menu icon (three horizontal bars) */
 .menu-icon {
     font-size: 2em;
     margin-left: 0.5em;
