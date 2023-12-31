@@ -29,7 +29,7 @@ def home():
 
 # Define a route for the login page
 @app.route('/login')
-def marketplace():
+def login():
     # Render the 'login.html' template
     return render_template('pages/login.html')
 
