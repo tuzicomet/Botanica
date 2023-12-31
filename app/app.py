@@ -27,6 +27,12 @@ def home():
     # Render the 'index.html' template
     return render_template('pages/index.html')
 
+# Define a route for the login page
+@app.route('/login')
+def marketplace():
+    # Render the 'login.html' template
+    return render_template('pages/login.html')
+
 # Define a route for the forum front page
 @app.route('/forum')
 def forum():
@@ -36,7 +42,7 @@ def forum():
 # Define a route for the marketplace front page
 @app.route('/marketplace')
 def marketplace():
-    # Render the 'forum.html' template
+    # Render the 'marketplace.html' template
     return render_template('pages/marketplace.html')
 
 # This block ensures that the app is run only when this script is executed directly
