@@ -8,17 +8,21 @@
 -->
 <div class="header-box">
     <!-- Header content -->
-    
+
     <!-- Three-bar menu icon -->
     <!-- NOTE: This is an HTML entity, alternatively could use an image -->
     <div class="menu-icon">&#9776;</div>
 
+    <!-- Regular header (header shown when at top of page) -->
     <div class="Header">
         <!-- Whole logo (text and icon) is a link to the home page -->
         <a href="{{ url_for('home') }}">
+
             <span class="logo-text">Botanica</span> <!--Text part of the logo-->
+
             <img src="{{ url_for('static', filename='img/logo150.png') }}"
                 alt="Botanica logo", class="logo-icon"> <!--icon part of the logo-->
+
         </a>
     </div>
 
@@ -27,15 +31,23 @@
 
         <!-- Logo, including text and icon, for the minimised header -->
         <div class="minimised-logo">
+
             <a href="{{ url_for('home') }}">
+
                 <span class="logo-text">Botanica</span> <!-- Could remove this part -->
+
                 <img src="{{ url_for('static', filename='img/logo150.png') }}" 
                     alt="Botanica logo", class="logo-icon">
+
             </a>
+
         </div>
     </div>
 
-    <!-- Menu bar (initially hidden) -->
+    <!-- 
+        Menu bar (initially hidden), this is the menu that pops up after pressing 
+        the menu icon button 
+    -->
     <div class="menu-bar">
         <!-- Add menu items here later -->
     </div>
