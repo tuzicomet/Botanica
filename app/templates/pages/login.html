@@ -1,0 +1,34 @@
+<!--
+    login.html - login page for the Botanica website.
+
+    This file extends the base layout and defines the content specific to the forum page.
+
+    This page is where users can enter their details to log in, or sign up.
+
+    Author: Leonard Lau
+    Last Updated: 31/12/2023
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta information -->
+</head>
+
+<body>
+    <!-- Content block that overrides the 'content' block in the base layout -->
+    {% extends 'layouts/base.html' %}
+
+    <!-- Adds this to the title -->
+    {% block title %}- Login{% endblock %}
+
+    {% block content %}
+
+    <!-- Main content for the home page -->
+    <h1>Login</h1>
+    <p>This is the login page of the Botanica website.</p>
+
+    {% endblock %}
+</body>
+
+</html>
