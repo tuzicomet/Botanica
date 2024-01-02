@@ -13,17 +13,46 @@
     <!-- NOTE: This is an HTML entity, alternatively could use an image -->
     <div class="menu-icon">&#9776;</div>
 
-    <!-- Regular header (header shown when at top of page) -->
-    <div class="Header">
-        <!-- Whole logo (text and icon) is a link to the home page -->
-        <a href="{{ url_for('home') }}">
+    <div class="regular-header">
+        <!-- Regular header (header shown when at top of page) -->
+        <div class="Header">
 
-            <span class="logo-text">Botanica</span> <!--Text part of the logo-->
+            <!-- First third of the regular header-->
+            <div class="regular-header-third">
+                <!-- 
+                    Currently empty space. 
+                    The point of this is that I am separating the regular header into three
+                    different sections, using flexbox. This is the space which the menu bar
+                    occupies, and the reason that I am not putting the menu bar here (which 
+                    is a viable option if I want to do that later), is that I want the menu bar
+                    to also be in the minimised header, so it needs to not be part of the 
+                    regular header (if I did that I would need a separate menu bar for that)
+                -->
+            </div>
 
-            <img src="{{ url_for('static', filename='img/logo150.png') }}"
-                alt="Botanica logo", class="logo-icon"> <!--icon part of the logo-->
+            <!-- The logo (text+icon) for the regular header -->
+            <div class="header-logo">
+                <!-- Whole logo is a link to the home page -->
+                <a href="{{ url_for('home') }}">
 
-        </a>
+                    <span class="logo-text">Botanica</span> <!--Text part of the logo-->
+
+                    <img src="{{ url_for('static', filename='img/logo150.png') }}"
+                        alt="Botanica logo", class="logo-icon"> <!--icon part of the logo-->
+
+                </a>
+            </div>
+
+            <!-- Link to the login page -->
+            <span class="login-button">
+                <div class="login-text">
+                    <a href="{{ url_for('login') }}">
+                        Login
+                    </a>
+                </div>
+            </span>
+            
+        </div>
     </div>
 
     <!-- When scrolling down from the top, the header will be reduced to a minimised header bar-->

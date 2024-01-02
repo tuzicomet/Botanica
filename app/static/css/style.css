@@ -30,9 +30,6 @@ a:hover {
 
 /* Additional styles for the regular header */
 .Header {
-    /* Add styles specific to the regular header, including the DM Serif Display font */
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.1em;
     padding: 0.5em;
     margin: 0; /* Remove margin to ensure full-width */
     /* The following are used so that the Botanica text and the logo are centered together */
@@ -54,6 +51,49 @@ a:hover {
     height: auto; /* Maintain aspect ratio */
     margin-left: 0.3em; /* Adjust the spacing between the logo and text */
     vertical-align: text-bottom; /* vertically align the icon more with the text */
+}
+
+/* The first/left third of the regular header flexbox */
+.regular-header-third {
+    flex: 1 1 33%;  /* flex-grow: 1, flex-shrink: 1, flex-basis: 33% */
+    display: flex;
+    justify-content: flex-start; /* put at the start of the flexbox */
+    align-items: center;
+  }
+  
+/* 
+The logo part (text+icon) of the regular header flexbox 
+aka the second/center third of the regular header
+*/
+.header-logo {
+    flex: 1 1 33%; /* flex-grow: 1, flex-shrink: 1, flex-basis: 33% */
+    display: flex;
+    justify-content: center; /* put at the middle of the flexbox */
+    align-items: center;
+    /* Add styles specific to the regular header logo */
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1em;
+}
+
+/* 
+    The login button on the regular header flexbox 
+    aka the last/right third of the regular header
+*/
+.login-button {
+    flex: 1 1 33%; /* flex-grow: 1, flex-shrink: 1, flex-basis: 33% */
+    display: flex;
+    justify-content: flex-end; /* put at the end of the flexbox */
+    align-items: center;
+    font-weight: bold;
+}
+
+/* styling for the text on the login-button */
+.login-text {
+    /* 
+        adding padding directly to login-button affects the entire flexbox,
+        so I am avoiding that by applying it here 
+    */
+    padding-right: 1em;
 }
 
 /* styling for the regular navigation bar */
