@@ -28,6 +28,21 @@ a:hover {
     color: rgb(16, 117, 60); /* Change link color to green on hover */
 }
 
+/* styling for the content block on the page (see base.html) */
+.content {
+    /* 
+        using these so that we can make sure that the footer is attached to the bottom,
+
+        NOTE: with the current implementation, even if the content is empty, the footer is still
+        pushed to be below the screen (i.e. you always need to scroll down to see it). I'm not
+        exactly sure why, but probably because the header is not part of .content so it pushes 
+        it down. Regardless, I think it's fine so I'm keeping it.
+    */
+    min-height: 100vh;    
+    display: flex;
+    flex-direction: column;
+}
+
 /* Additional styles for the regular header */
 .Header {
     padding: 0.5em;
@@ -249,10 +264,10 @@ body.scrolled .minimised-header {
 
 /* Styling for the footer */
 .footer-box {
+    width: 100%; /* make it go across the whole screen */
     background-color: rgb(16, 117, 60);
     font-size: 1.1em;
     font-weight: 500;
     padding: 0.5em;
     padding-left: 1em;
-    margin: 0; /* Remove margin to ensure full-width */
 }

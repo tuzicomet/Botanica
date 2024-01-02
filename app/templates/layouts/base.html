@@ -43,7 +43,9 @@
         <!-- Include the navigation menu -->
         {% include 'partials/nav.html' %}
         <!-- Content block that will be overridden by individual pages -->
-        {% block content %}{% endblock %}
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
         <!-- Include the footer section -->
         {% include 'partials/footer.html' %}
     </div>
