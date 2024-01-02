@@ -55,7 +55,7 @@ a:hover {
 
 /* The first/left third of the regular header flexbox */
 .regular-header-third {
-    flex: 1 1 33%;  /* flex-grow: 1, flex-shrink: 1, flex-basis: 33% */
+    flex: 1 1 10%; /* flex-grow: 1, flex-shrink: 1, flex-basis: 10% */
     display: flex;
     justify-content: flex-start; /* put at the start of the flexbox */
     align-items: center;
@@ -66,7 +66,13 @@ The logo part (text+icon) of the regular header flexbox
 aka the second/center third of the regular header
 */
 .header-logo {
-    flex: 1 1 33%; /* flex-grow: 1, flex-shrink: 1, flex-basis: 33% */
+    /* 
+        flex-grow: 1, flex-shrink: 1, flex-basis: 80%
+        'flex-basis: 80%' makes it take up 80% of the flexbox, which I want since it
+        is the biggest part of the header, makes it so that if I minimise the screen,
+        the text and logo wont get separated since they have more space 
+    */
+    flex: 1 1 80%;
     display: flex;
     justify-content: center; /* put at the middle of the flexbox */
     align-items: center;
@@ -80,7 +86,7 @@ aka the second/center third of the regular header
     aka the last/right third of the regular header
 */
 .login-button {
-    flex: 1 1 33%; /* flex-grow: 1, flex-shrink: 1, flex-basis: 33% */
+    flex: 1 1 10%; /* flex-grow: 1, flex-shrink: 1, flex-basis: 10% */
     display: flex;
     justify-content: flex-end; /* put at the end of the flexbox */
     align-items: center;
