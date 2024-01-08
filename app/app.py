@@ -5,45 +5,43 @@
     It defines the Flask application instance, routes, and configuration.
 
     Author: Leonard Lau
-    Last Updated: 29/12/2023
+    Last Updated: 9/01/2023
 """
 
 import os
 from flask import send_from_directory  
-
 from flask import Flask, render_template
+from blueprints.main import main_bp
+
+# Import the Config class from config.py
+# TODO: create config.py later when needed
 
 # Create a Flask application instance
 app = Flask(__name__, template_folder='templates')
 
-# Add a custom view to handle /favicon requests, as by default, flask only serves files on the /static endpoint
-@app.route('/favicon.ico') 
-def favicon(): 
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
+# Create a function to create and configure the Flask application
+def create_app():
+    # Create the Flask application instance
+    app = Flask(__name__, template_folder='templates')
 
-# Define a route for the home page
-@app.route('/')
-def home():
-    # Render the 'index.html' template
-    return render_template('pages/index.html')
+    # Load configuration from the Config class TODO: create it
+    # app.config.from_object(Config)
 
-# Define a route for the login page
-@app.route('/login')
-def login():
-    # Render the 'login.html' template
-    return render_template('pages/login.html')
+    # Register the main Blueprint
+    from blueprints.main import main_bp
+    app.register_blueprint(main_bp)
 
-# Define a route for the forum front page
-@app.route('/forum')
-def forum():
-    # Render the 'forum.html' template
-    return render_template('pages/forum.html')
+    # Add a custom view to handle /favicon requests, as by default, flask only 
+    #   serves files on the /static endpoint
+    @app.route('/favicon.ico')
+    def favicon():
+        return send_from_directory(os.path.join(app.root_path, 'static'), 
+                                   'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
-# Define a route for the marketplace front page
-@app.route('/marketplace')
-def marketplace():
-    # Render the 'marketplace.html' template
-    return render_template('pages/marketplace.html')
+    return app
+
+# Create the Flask application instance
+app = create_app()
 
 # This block ensures that the app is run only when this script is executed directly
 if __name__ == '__main__':

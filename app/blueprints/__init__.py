@@ -17,4 +17,8 @@
 
 from flask import Blueprint
 
-"""TODO"""
+# Create a Blueprint instance for the 'main' module
+main_bp = Blueprint('main', __name__, template_folder='templates', static_folder='static')
+
+# Import routes to include them in the blueprint
+from blueprints.main import routes

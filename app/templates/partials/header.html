@@ -4,7 +4,7 @@
     This file defines the header content, including the site name and a link to the home page.
 
     Author: Leonard Lau
-    Last Updated: 30/12/2023
+    Last Updated: 9/01/2023
 -->
 <div class="header-box">
     <!-- Header content -->
@@ -33,7 +33,7 @@
             <!-- The logo (text+icon) for the regular header -->
             <div class="header-logo">
                 <!-- Whole logo is a link to the home page -->
-                <a href="{{ url_for('home') }}">
+                <a href="{{ url_for('main.home') }}">
 
                     <span class="logo-text">Botanica</span> <!--Text part of the logo-->
 
@@ -46,7 +46,7 @@
             <!-- Link to the login page -->
             <span class="login-button">
                 <div class="login-text">
-                    <a href="{{ url_for('login') }}">
+                    <a href="{{ url_for('main.login') }}">
                         Login
                     </a>
                 </div>
@@ -61,7 +61,7 @@
         <!-- Logo, including text and icon, for the minimised header -->
         <div class="minimised-logo">
 
-            <a href="{{ url_for('home') }}">
+            <a href="{{ url_for('main.home') }}">
 
                 <span class="logo-text">Botanica</span> <!-- Could remove this part -->
 
