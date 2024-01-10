@@ -5,7 +5,7 @@
     in the Botanica web application.
 
     Author: Leonard Lau
-    Last Updated: 09/01/2024
+    Last Updated: 10/01/2024
 """
 
 # NOTE: whatever is imported here, does not need to be imported again in routes.py or views.py

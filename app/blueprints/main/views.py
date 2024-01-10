@@ -4,8 +4,10 @@
     This file contains the route definitions for the main blueprint.
     
     Author: Leonard Lau
-    Last Updated: 9/01/2023
+    Last Updated: 10/01/2023
 """
+
+from flask import render_template
 
 # Define view functions for the 'main' blueprint
 

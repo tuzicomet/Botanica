@@ -5,11 +5,11 @@
     handling the main pages and functionalities of the Botanica web application.
 
     Author: Leonard Lau
-    Last Updated: 09/01/2024
+    Last Updated: 10/01/2024
 """
 
-from flask import render_template
 from . import main_bp
+from .views import *
 
 # Define routes for the 'main' blueprint
 # (define routes for pages using this blueprint)
@@ -20,25 +20,21 @@ from . import main_bp
 # Define a route for the home page
 @main_bp.route('/', endpoint='home')
 def home():
-    # Render the 'index.html' template
-    return render_template('pages/index.html')
+    return render_home_page()
 
 # Define a route for the login page
 @main_bp.route('/login')
 def login():
-    # Render the 'login.html' template
-    return render_template('pages/login.html')
+    return render_login_page()
 
 # Define a route for the forum page
 @main_bp.route('/forum')
 def forum():
-    # Render the 'forum.html' template
-    return render_template('pages/forum.html')
+    return render_forum_page()
 
 # Define a route for the marketplace page
 @main_bp.route('/marketplace')
 def marketplace():
-    # Render the 'marketplace.html' template
-    return render_template('pages/marketplace.html')
+    return render_marketplace_page()
 
 # Add more routes as needed
