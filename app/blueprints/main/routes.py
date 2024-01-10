@@ -14,6 +14,8 @@ from . import main_bp
 # Define routes for the 'main' blueprint
 # (define routes for pages using this blueprint)
 
+# NOTE: enpoint parameter specifies a unique name that can be used when generating URLs
+# eg url_for('main.home')
 @main_bp.route('/', endpoint='home')
 def home():
     # Render the 'index.html' template
@@ -25,11 +27,13 @@ def login():
     # Render the 'login.html' template
     return render_template('pages/login.html')
 
+# Define a route for the forum page
 @main_bp.route('/forum')
 def forum():
     # Render the 'forum.html' template
     return render_template('pages/forum.html')
 
+# Define a route for the marketplace page
 @main_bp.route('/marketplace')
 def marketplace():
     # Render the 'marketplace.html' template
