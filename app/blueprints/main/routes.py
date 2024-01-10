@@ -8,7 +8,7 @@
     Last Updated: 09/01/2024
 """
 
-from flask import Blueprint, render_template
+from flask import render_template
 from . import main_bp
 
 # Define routes for the 'main' blueprint
@@ -16,6 +16,8 @@ from . import main_bp
 
 # NOTE: enpoint parameter specifies a unique name that can be used when generating URLs
 # eg url_for('main.home')
+
+# Define a route for the home page
 @main_bp.route('/', endpoint='home')
 def home():
     # Render the 'index.html' template
